@@ -1,6 +1,8 @@
 const Task = require("../Models/TaskSchema");
 
 
+//*---------------------------* Add New Task *---------------------------*//
+
 exports.AddTask = async (req, res) => {
     try {
         const task = await new Task(req.body).save();
@@ -10,6 +12,7 @@ exports.AddTask = async (req, res) => {
     }
 }
 
+//*---------------------------* Get All Tasks *---------------------------*//
 
 exports.AllTasks = async (req, res) => {
     try {
@@ -20,6 +23,8 @@ exports.AllTasks = async (req, res) => {
     }
 }
 
+//*---------------------------* Get Tasks By UserId *---------------------------*//
+
 exports.TasksByUserId = async (req, res) => {
     try {
         const tasks = await Task.find({ userId: req.params.userId });
@@ -28,6 +33,8 @@ exports.TasksByUserId = async (req, res) => {
         res.status(400).send(error);
     }
 }
+
+//*---------------------------* Update Task By Id *---------------------------*//
 
 exports.UpdateTask = async (req, res) => {
     try {
@@ -40,6 +47,8 @@ exports.UpdateTask = async (req, res) => {
         res.status(400).send(error);
     }
 }
+
+//*---------------------------* Delete Task By Id *---------------------------*//
 
 exports.DeleteTask =  async (req, res) => {
     try {

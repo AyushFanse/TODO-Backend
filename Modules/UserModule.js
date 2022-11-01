@@ -1,6 +1,6 @@
 const User = require("../Models/UserSchema");
 
-//*---------------------------* Get All Users From DataBase *---------------------------*//
+//*---------------------------* Get All Users *---------------------------*//
 
 exports.AllUsers = async (req, res) => {
     try {
@@ -11,7 +11,7 @@ exports.AllUsers = async (req, res) => {
     }
 };
 
-//*---------------------------* Get User By ID From DataBase *---------------------------*//
+//*---------------------------* Get User By ID *---------------------------*//
 
 exports.UserById = async (req, res) => {
     try {

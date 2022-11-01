@@ -18,5 +18,4 @@ router.patch("/:userId", User.UpdateUser);
 
 router.delete("/:userId", User.DeleteUser);
 
-
 module.exports = router;
